@@ -1,0 +1,18 @@
+*{
+    background-color: whitesmoke;
+}
+a:hover {
+  text-shadow: 2px 2px 8px palevioletred;
+  
+}
+nav, p{
+    padding:0.5em;
+    color:rgb(67, 67, 171);
+}
+.main{
+    display: flex;
+}
+.left{
+    margin-right: 30px;
+    background-color: palevioletred;
+}

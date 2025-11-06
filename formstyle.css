@@ -1,0 +1,23 @@
+input[type=text]{
+    background-color: black;
+    color:white;
+}
+input[type=password]{
+    background-color: red;
+    color:white;
+}
+div, #innerID{
+    color:blueviolet;
+}
+#lor{
+    color:white;
+    text-indent: 2em;
+    text-align:30px;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-left:80px;
+    padding-bottom:50px;
+}
+#box{
+    border:2px solid white;
+}

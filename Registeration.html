@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="Registeration.css" />
+</head>
+<body>
+  <header>
+    <a href="#">Homepage</a>
+    <a href="#">Login</a>
+    <a href="#" class="active">Registration</a>
+    <a href="#">Catalogue</a>
+    <a href="#">Cart</a>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Branches</h3>
+      <ul>
+        <li>Computer Science Engineering <span>CSE</span></li>
+        <li>Electronics & Communication Engineering <span>ECE</span></li>
+        <li>Electrical & Electronics Engineering <span>EEE</span></li>
+        <li>Civil Engineering <span>CIVIL</span></li>
+        <li>Mechanical Engineering <span>ME</span></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="form-box">
+        <h2>Student Registration</h2>
+        <p>Fill in your details to create an account</p>
+
+        <form>
+          <div>
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name" />
+          </div>
+          <div>
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email" />
+          </div>
+          <div>
+            <label>Phone Number</label>
+            <input type="text" placeholder="Enter your phone number" />
+          </div>
+          <div>
+            <label>Branch</label>
+            <select>
+              <option>Select your branch</option>
+            </select>
+          </div>
+
+          <div class="dob-group">
+            <label>Date of Birth</label>
+            <select><option>Date</option></select>
+            <select><option>Month</option></select>
+            <select><option>Year</option></select>
+          </div>
+
+          <div class="sex-group">
+            <label>Sex</label>
+            <input type="radio" name="sex" /> Male
+            <input type="radio" name="sex" /> Female
+            <input type="radio" name="sex" /> Other
+          </div>
+
+          <div class="lang-group">
+            <label>Languages Known</label>
+            <input type="checkbox" /> Hindi
+            <input type="checkbox" /> Tamil
+            <input type="checkbox" /> English
+            <input type="checkbox" /> Telugu
+          </div>
+
+          <div class="address-group">
+            <label>Address</label>
+            <textarea placeholder="Enter your complete address"></textarea>
+          </div>
+
+          <div>
+            <label>Password</label>
+            <input type="password" placeholder="Create a password" />
+          </div>
+          <div>
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Confirm your password" />
+          </div>
+
+          <div class="buttons">
+            <button type="submit">Register</button>
+            <button type="reset" class="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

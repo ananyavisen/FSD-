@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Cart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 318px;
+            background-color: #8B1E3F;
+            color: white;
+            padding: 30px;
+        }
+
+        .sidebar h2 {
+            font-size: 22px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .branch-section {
+            margin-bottom: 35px;
+        }
+
+        .branch-title {
+            font-size: 17px;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .branch-code {
+            color: #F4C542;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .main-content {
+            flex: 1;
+            background-color: #f5f5f5;
+            padding: 50px 80px;
+        }
+
+        .cart-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cart-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #8B1E3F;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .cart-icon::before {
+            content: '🛒';
+            font-size: 40px;
+        }
+
+        .cart-header h1 {
+            color: #8B1E3F;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .cart-header p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .cart-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead tr {
+            border-bottom: 2px solid #8B1E3F;
+        }
+
+        th {
+            color: #8B1E3F;
+            font-weight: 600;
+            padding: 15px 10px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        td {
+            padding: 25px 10px;
+            color: #333;
+            font-size: 15px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .branch-badge {
+            background-color: #F4C542;
+            color: #333;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .delete-btn {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #8B1E3F;
+            border-radius: 6px;
+            background: white;
+            color: #8B1E3F;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .delete-btn:hover {
+            background-color: #8B1E3F;
+            color: white;
+        }
+
+        .summary {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .summary-item h3 {
+            color: #8B1E3F;
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .summary-item p {
+            color: #666;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Branches</h2>
+        
+        <div class="branch-section">
+            <div class="branch-title">Computer Science Engineering</div>
+            <div class="branch-code">CSE</div>
+        </div>
+
+        <div class="branch-section">
+            <div class="branch-title">Electronics & Communication Engineering</div>
+            <div class="branch-code">ECE</div>
+        </div>
+
+        <div class="branch-section">
+            <div class="branch-title">Electrical & Electronics Engineering</div>
+            <div class="branch-code">EEE</div>
+        </div>
+
+        <div class="branch-section">
+            <div class="branch-title">Civil Engineering</div>
+            <div class="branch-code">CIVIL</div>
+        </div>
+
+        <div class="branch-section">
+            <div class="branch-title">Mechanical Engineering</div>
+            <div class="branch-code">ME</div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="cart-header">
+            <div class="cart-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 4h14v2H7zm0 4h14v2H7zm0 4h14v2H7zm-4-8a1 1 0 011-1h1a1 1 0 011 1v1a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h1a1 1 0 011 1v1a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm0 4a1 1 0 011-1h1a1 1 0 011 1v1a1 1 0 01-1 1H4a1 1 0 01-1-1v-1z"/>
+                </svg>
+            </div>
+            <h1>My Cart</h1>
+            <p>Review your selected courses</p>
+        </div>
+
+        <div class="cart-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Branch</th>
+                        <th>Semester</th>
+                        <th>Credits</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CSE201</td>
+                        <td>Data Structures and Algorithms</td>
+                        <td><span class="branch-badge">CSE</span></td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>
+                            <button class="delete-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CSE301</td>
+                        <td>Database Management Systems</td>
+                        <td><span class="branch-badge">CSE</span></td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>
+                            <button class="delete-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="summary">
+            <div class="summary-item">
+                <h3>Total Courses</h3>
+                <p>2 courses selected</p>
+            </div>
+            <div class="summary-item" style="text-align: right;">
+                <h3>Total Credits</h3>
+                <p>8 credits</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
