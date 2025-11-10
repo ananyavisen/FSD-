@@ -1,0 +1,41 @@
+:root{
+    --bg: #B5C7BC;
+    --primary-color: #E89520;
+    --spaceOccupied: 1em;
+    --text-colour: #ffffff;
+    --footer-color: #000000
+}
+body{
+    background-color: var(--bg) ;
+    margin: 0;
+   
+}
+header{
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: var(--spaceOccupied);
+    color: var(--text-colour); 
+}
+.firstBox{
+    background-color: var(--text-colour);
+    border: 2px solid black;
+    padding: var(--spaceOccupied);
+    margin: var(--spaceOccupied)
+}
+.secondBox{
+    background-color: var(--text-colour);
+    border: 2px solid black;
+    padding: var(--spaceOccupied);
+    margin: var(--spaceOccupied)
+}
+.thirdBox{
+    background-color: var(--text-colour);
+    border: 2px solid black;
+    padding: var(--spaceOccupied);
+    margin: var(--spaceOccupied)
+}
+footer{
+    background-color: var(--footer-color);
+    color: var(--text-colour);
+    padding: var(--spaceOccupied);
+}
